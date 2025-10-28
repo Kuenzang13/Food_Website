@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunger Strike</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #853500, #d35400);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #8c3b05;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    .swiper {
+      width: 100%;
+      padding: 40px 0;
+      background-color: #fff5f0;
+    }
+
+    .swiper-slide {
+      width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .container h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #6c2f06;
+    }
+
+    .container p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .recipe {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fdfdfd;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .recipe h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #d35400;
+    }
+
+    .recipe img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .recipe img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(90deg, #9b4105, #d35400);
+      color: white;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        margin: 10px;
+      }
+
+      .swiper-slide {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Hunger Strike</header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="recepie_frame.html">Recipes</a>
+    <a href="shareform.html">Submit Recipe</a>
+  </nav>
+
+  <!-- Swiper Slider -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="apple pie.jpeg" alt="Apple Pie" />
+      </div>
+      <div class="swiper-slide">
+        <img src="spaghetti.jpeg" alt="Spaghetti" />
+      </div>
+      <div class="swiper-slide">
+        <img src="samosa.jpeg" alt="Samosa" />
+      </div>
+      <div class="swiper-slide">
+        <img src="pizza.jpg" alt="Pizza" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Apple.jpg" alt="Apple Dish" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Ema.jpeg" alt="Ema Datshi" />
+      </div>
+      <div class="swiper-slide">
+        <img src="pancakes.jpg" alt="Pancakes" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Chicken-Biryani.jpg" alt="Chicken Biryani" />
+      </div>
+      <div class="swiper-slide">
+        <img src="boba.jpg" alt="Boba Tea" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2>Welcome to Hunger Strike</h2>
+    <p>Explore and share delicious recipes from around the world.</p>
+
+    <div class="recipe">
+      <h3>Featured Recipe: Ema Datshi</h3>
+      <img src="Ema.jpeg" alt="Ema Datshi - a Bhutanese dish">
+      <p>A popular dish of Bhutan made from chili and cheese. A must-try for spice lovers!</p>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 Hunger Strike. All rights reserved.</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pancake Recipe</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background-color: #fffaf3;
+      color: #333;
+    }
+
+    /* Header with image background */
+    header {
+      background: url('https://images.unsplash.com/photo-1584270354949-1b7f6a01c72c?auto=format&fit=crop&w=1050&q=80') no-repeat center center / cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -40px auto 40px;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 1s ease-out;
+      position: relative;
+      z-index: 10;
+    }
+
+    h3 {
+      text-align: center;
+      color: #ff7043;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px dashed #ffe0b2;
+      padding-bottom: 10px;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      color: #ff7043;
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #fff3e0;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      animation: fadeUp 1s ease-out;
+    }
+
+    ul li::before {
+      content: "🍴";
+      font-size: 1.2rem;
+    }
+
+    .instructions li::before {
+      content: "👨‍🍳";
+    }
+
+    footer {
+      background-color: #ffcc80;
+      text-align: center;
+      padding: 20px;
+      color: #5d4037;
+      font-weight: bold;
+      font-size: 0.95rem;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 20px;
+        margin: -20px 10px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  
+  <header>
+    <h1>🥞 Pancake Recipe</h1>
+    <p>Fluffy. Golden. Delicious.</p>
+  </header>
+
+  <div class="container">
+    <h3>About the Recipe</h3>
+
+    <div class="image-container">
+      <img src="pancakes.jpg" alt="Fluffy Pancakes">
+    </div>
+
+    <div>
+      <div class="section-title">Ingredients</div>
+      <ul>
+        <li>1 cup all-purpose flour</li>
+        <li>2 tablespoons sugar</li>
+        <li>2 teaspoons baking powder</li>
+        <li>1/2 teaspoon salt</li>
+        <li>1 cup milk</li>
+        <li>2 tablespoons unsalted butter, melted</li>
+        <li>1 large egg</li>
+        <li>Vegetable oil, for cooking</li>
+        <li>Butter and maple syrup, for serving</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="section-title">Instructions</div>
+      <ul class="instructions">
+        <li><strong>Mix Dry Ingredients:</strong> Combine flour, sugar, baking powder, and salt.</li>
+        <li><strong>Mix Wet Ingredients:</strong> Whisk milk, egg, butter, and vanilla.</li>
+        <li><strong>Combine:</strong> Gently stir wet into dry until just mixed.</li>
+        <li><strong>Heat Pan:</strong> Preheat a non-stick pan and oil lightly.</li>
+        <li><strong>Pour & Cook:</strong> Use ¼ cup per pancake; cook until bubbles form.</li>
+        <li><strong>Flip:</strong> Cook other side until golden.</li>
+        <li><strong>Serve:</strong> Top with butter, syrup, or berries.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Pancake Heaven | Designed with 🧡 for breakfast lovers
+  </footer>
+    <script>
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
